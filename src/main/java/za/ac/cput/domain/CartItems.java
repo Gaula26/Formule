@@ -1,7 +1,6 @@
 package za.ac.cput.domain;
 
 
-
 class CartItems {
     private Product product;
     private int quantity;
