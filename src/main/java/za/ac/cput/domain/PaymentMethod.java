@@ -7,9 +7,9 @@ package za.ac.cput.domain;
 
 public enum PaymentMethod {
 
-    SUCCESSFUL,
-    PENDING,
-    FAILED,
-    CANCELLED,
+    CREDIT_CARD,
+    DEBIT_CARD,
+    CASH,
+    PAYPAL,
 
 }

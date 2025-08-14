@@ -57,5 +57,19 @@ public class Helper {
         }
         return true;
     }
+
+    public static boolean isValidAmount(double amount) {
+        return false;
+    }
+
+    public static boolean isValidQuantity(int quantity) {
+        return quantity > 0 && quantity <= 1000;
+    }
+
+    public static boolean isValidPrice(double price) {
+        return price > 0 && price <= 100000;
+    }
+
+
 }
 

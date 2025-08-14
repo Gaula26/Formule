@@ -1,4 +1,4 @@
-
+package za.ac.cput.factory;
 /*
 
 Author: Annah Gaula Manda (230164250)
@@ -15,8 +15,8 @@ import java.util.Date;
 
 public class PaymentFactory {
 
-    public static Payment createPayment(int id, Customer customer, double amount, PaymentMethod method, Date date) {
-        // Validate inputs using Helper class
+    public static Payment createPayment(int id, Customer customer, double amount, PaymentMethod method, Date date, Status status) {
+
         if(!Helper.isValidAmount(amount)){
             return null;
         }
@@ -39,6 +39,7 @@ public class PaymentFactory {
                 .setAmount(amount)
                 .setMethod(method)
                 .setDate(date)
+                .setStatus(status)
                 .build();
     }
 }

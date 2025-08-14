@@ -1,6 +1,6 @@
 /*
- * Author: Annah Manda (230164250)
- * Date: 18/05/2025
+Author: Annah Gaula Manda (230164250)
+Date: 08/08/2025
  */
 package za.ac.cput.factory;
 
@@ -38,11 +38,7 @@ public class CartItemsFactoryTest {
         );
         int quantity = 2;
         Double totalItems = 250.00 * 3;
-
-
         CartItems cartItems = CartItemsFactory.createCartItems(product, quantity, totalItems);
-
-
         assertNull(cartItems, "CartItems should be null for invalid totalItems");
         System.out.println("CartItems with invalid data: " + cartItems);
     }
@@ -55,11 +51,7 @@ public class CartItemsFactoryTest {
         );
         int quantity = 3;
         Double totalItems = 350.00 * quantity;
-
-
-        CartItems cartItems = CartItemsFactory.createCartItems(product, quantity, totalItems);
-
-
+        CartItems cartItems = CartItemsFactory.createCartItems(id, product, quantity, totalItems);
         assertNotNull(cartItems, "CartItems should not be null for valid inputs");
         System.out.println(cartItems);
     }

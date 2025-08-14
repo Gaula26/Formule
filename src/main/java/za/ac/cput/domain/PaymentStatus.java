@@ -7,8 +7,8 @@ package za.ac.cput.domain;
 
 public enum PaymentStatus {
 
-    CREDIT_CARD,
-    DEBIT_CARD,
-    CASH,
-    PAYPAL,
+    SUCCESSFUL,
+    PENDING,
+    FAILED,
+    CANCELLED,
 }
