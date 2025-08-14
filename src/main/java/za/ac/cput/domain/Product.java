@@ -14,7 +14,7 @@ public class Product {
     private double price;
     private int quantity;
     private int categoryId;
-    private Brand brand;
+    private Brands brand;
 
     private Product(){
 
@@ -53,7 +53,7 @@ public class Product {
     public int getCategoryId() {
         return categoryId;
     }
-    public Brand getBrand() {
+    public Brands getBrand() {
         return brand;
     }
 
@@ -77,7 +77,7 @@ public class Product {
         private double price;
         private int quantity;
         private int categoryId;
-        private Brand brand;
+        private Brands brand;
 
         public Builder setId(int id){
             this.id = id;
@@ -103,7 +103,7 @@ public class Product {
             this.categoryId = categoryId;
             return this;
         }
-        public Builder setBrand(Brand brand){
+        public Builder setBrand(Brands brand){
             this.brand = brand;
             return this;
         }

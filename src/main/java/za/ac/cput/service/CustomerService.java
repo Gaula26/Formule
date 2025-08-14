@@ -30,6 +30,11 @@ public class CustomerService  implements ICustomerService {
     }
 
     @Override
+    public void delete(Integer integer) {
+
+    }
+
+    @Override
     public boolean deleteCustomer(Integer id) {
         this.repository.deleteById(id);
         return true;

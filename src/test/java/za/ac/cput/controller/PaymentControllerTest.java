@@ -15,9 +15,12 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.Payment;
+import za.ac.cput.domain.PaymentStatus;
+import za.ac.cput.factory.CustomerFactory;
 import za.ac.cput.factory.PaymentFactory;
-
+import za.ac.cput.domain.Customer;
 import static org.junit.jupiter.api.Assertions.*;
+import static za.ac.cput.domain.PaymentStatus.PENDING;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestMethodOrder(MethodOrderer.MethodName.class)
@@ -32,14 +35,23 @@ class PaymentControllerTest {
 
     @BeforeAll
     static void setUp() throws Exception {
+        Customer customer;
         payment = PaymentFactory.createPayment(
-                "PAY001",
-                "C101",
+                122,
+                customer = CustomerFactory.createCustomer(
+                        "Annah",
+                        "Manda",
+                        "0741254789",
+                        "manann124@gmail.com",
+                        "CAA145",
+                        12),
                 450.00,
                 "CREDIT_CARD",
                 "26 May 2025",
+                PaymentStatus.PENDING,
         );
     }
+
 
     @Test
     void a_create() {

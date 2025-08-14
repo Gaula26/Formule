@@ -28,8 +28,8 @@ class CartItemsServiceTest {
     private static ICartItemsService service;
 
     private static CartItems cartItem = CartItemsFactory.createCartItems(
-            "C101",
-            "P201",
+            101,
+            "Garnier",
             3,
             150.00
     );

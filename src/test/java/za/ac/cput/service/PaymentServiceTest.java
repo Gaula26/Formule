@@ -32,7 +32,7 @@ class PaymentServiceTest {
             450.00,
             "Credit Card",
             "26 05 2025",
-            CANCELED
+            PaymentStatus.CANCELED
     );
 
     @Test

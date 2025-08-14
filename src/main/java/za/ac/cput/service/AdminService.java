@@ -30,6 +30,11 @@ public class AdminService implements IAdminService {
     }
 
     @Override
+    public void delete(Integer integer) {
+
+    }
+
+    @Override
     public boolean deleteAdmin(Integer id) {
          this.repository.deleteById(id);
          return true;
